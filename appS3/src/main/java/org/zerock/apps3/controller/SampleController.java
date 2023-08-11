@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,4 +48,7 @@ public class SampleController {
 		return s3Paths;
 		
 	}
+	
+	@GetMapping("/upload") //http://ec2-13-209-72-32.ap-northeast-2.compute.amazonaws.com:8080/api/sample/upload가 되는지 상세 설정(위의 post방식처럼)은 안하고 주소창으로 확인만 함
+	public void upload() {}
 }
